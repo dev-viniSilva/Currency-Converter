@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Currency Converter</title>
+</head>
+<body>
+    <div class="main-div">
+        <h2 class="name">Currency Converter</h2>
+        <label for="amount" class="label">AMOUNT</label>
+        
+        <div class="div-input">
+        
+        <input type="number" id="amount" class="input-amount" name="amount" placeholder="0">
+        
+            <select id="from-currency" class="select-from" name="currency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="BRL">BRL</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
+            <option value="AUD">AUD</option>
+            <option value="CAD">CAD</option>
+            <option value="CHF">CHF</option>
+            <option value="CNY">CNY</option>
+            <option value="INR">INR</option>
+            <option value="MXN">MXN</option>
+            <option value="RUB">RUB</option>
+            <option value="KRW">KRW</option>
+            <option value="TRY">TRY</option>
+            <option value="ZAR">ZAR</option>
+            </select>
+        </div>
+        
+
+        <h2 class="error-msg" id="error-msg">Enter a valid amount.</h2>
+
+            <label for="to" class="label">To</label>
+        
+         <div class="div-center">
+            <select id="to-currency" class="select-to" name="currency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="BRL">BRL</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
+            <option value="AUD">AUD</option>
+            <option value="CAD">CAD</option>
+            <option value="CHF">CHF</option>
+            <option value="CNY">CNY</option>
+            <option value="INR">INR</option>
+            <option value="MXN">MXN</option>
+            <option value="RUB">RUB</option>
+            <option value="KRW">KRW</option>
+            <option value="TRY">TRY</option>
+            <option value="ZAR">ZAR</option>
+            </select>
+            <button class="convert-btn" id="convert-btn">Convert</button>
+         </div>
+    
+        <div class="div-total">
+            <p class="label">RESULT</p>
+            <h2 class="convert-amount" id="convert-amount">----</h2>
+            <p class="exchange-rate" id="exchange-rate">Enter amount and convert</p>
+        </div>
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 

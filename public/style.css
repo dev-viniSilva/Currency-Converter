@@ -1,0 +1,140 @@
+body {
+  background: var(--bg);
+  font-family: 'IBM Plex Sans', sans-serif;
+  margin-top: 10em;
+}
+
+:root {
+  --bg:         #0f1923;
+  --card:       #162030;
+  --border:     #1e3045;
+  --input-bg:   #0f1923;
+  --accent:     #38bdf8;
+  --accent-hover: #7dd3fc;
+  --text:       #e8f4fd;
+  --muted:      #4a7fa5;
+  --muted-dark: #2d5a7a;
+  --error:      #f87171;
+}
+
+.main-div {
+  background-color: var(--card);
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2em;
+  border: 1px solid var(--muted-dark);
+  border-radius: 8px;
+}
+
+.light-label {
+  color: var(--accent);
+}
+
+.name {
+  color: var(--text);
+  font-size: 17px;
+}
+
+.div-input {
+  display: flex;
+  gap: 1em;
+}
+
+.label {
+  color: var(--muted-dark);
+  font-size: 12px;
+}
+
+.input-amount {
+  background-color: var(--input-bg);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 22px;
+  color: var(--text);
+  width: 60%;
+  height: 50px;
+  padding-left: 12px;
+}
+
+input::placeholder {
+  color: var(--muted-dark);
+  
+}
+
+.select-from {
+  background-color: var(--input-bg);
+  border: 2px solid var(--border);
+  color: var(--text);
+  width: 100px;
+  border-radius: 8px;
+}
+
+.div-center {
+  max-width: 400px;
+}
+
+.input-to {
+  background-color: var(--input-bg);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  height: 35px;
+  width: 90%;
+}
+
+.select-to {
+  background-color: var(--input-bg);
+  border: 2px solid var(--border);
+  color: var(--text);
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+}
+
+.convert-btn {
+  margin-top:2em;
+  margin-bottom: 2em;
+  font-weight: 700;
+  border-radius: 8px;
+  width: 100%;
+  background-color: var(--accent);
+  border: none;
+  height: 50px;
+}
+
+.convert-btn:hover {
+  background-color: var(--accent-hover);
+}
+
+.div-total { 
+  background-color: var(--input-bg);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  width: 80%;
+  padding: 16px 20px; 
+  margin: 0 auto;
+  
+}
+
+.convert-amount {
+  color: var(--accent);
+  font-size: 30px;
+}
+
+.exchange-rate {
+  color: var(--muted-dark);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.div-total p,
+.div-total h2 {
+    margin: 0; 
+}
+
+.error-msg {
+color: #f87171;
+text-align: center;
+display: none;
+}
+
