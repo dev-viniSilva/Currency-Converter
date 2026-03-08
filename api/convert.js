@@ -1,4 +1,3 @@
-import 'dotenv/config';
 import fetch from 'node-fetch';
 
 export default async function handler(req, res) {
@@ -10,8 +9,8 @@ export default async function handler(req, res) {
         }
 
         const API_URL = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/${from}`;
-
         const response = await fetch(API_URL);
+
         if (!response.ok) return res.status(500).json({ error: "Erro na API externa" });
 
         const data = await response.json();
