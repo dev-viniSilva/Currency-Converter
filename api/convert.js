@@ -1,5 +1,3 @@
-import fetch from 'node-fetch';
-
 export default async function handler(req, res) {
     try {
         const { from, to, amount } = req.query;
@@ -8,9 +6,12 @@ export default async function handler(req, res) {
             return res.status(400).json({ error: "Parâmetros faltando" });
         }
 
-        const API_URL = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/${from}`;
-        const response = await fetch(API_URL);
+        const API_KEY = process.env.API_KEY;
+        if (!API_KEY) return res.status(500).json({ error: "API_KEY não definida" });
 
+        const API_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest/${from}`;
+
+        const response = await fetch(API_URL); // fetch nativo da Vercel
         if (!response.ok) return res.status(500).json({ error: "Erro na API externa" });
 
         const data = await response.json();
